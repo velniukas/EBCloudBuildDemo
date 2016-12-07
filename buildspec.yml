@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
+artifacts:
+  files:
+    - target/my-web-app.war
+    - move-war.sh
+  discard-paths: yes
